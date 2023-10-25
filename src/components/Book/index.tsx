@@ -14,11 +14,16 @@ export interface BookProps {
 }
 
 export const Book = component$<BookProps>(({ book }) => {
-  const { title, cover, author, year } = book;
+  const { title, author, year } = book;
   return (
     <div class="flex flex-col items-center bg-white rounded-lg">
       <div class="relative">
-        <CustomImage cover={cover} title={title} height={315} width={475} />
+        <CustomImage
+          cover="./images/17245.jpg"
+          title={title}
+          height={315}
+          width={475}
+        />
       </div>
       <div class="flex flex-col justify-between gap-2 p-4 leading-normal">
         <h3 class="text-gray-900 font-medium text-lg">{title}</h3>
